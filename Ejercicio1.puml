@@ -1,0 +1,8 @@
+@startuml
+:Usuario: -- (Acceder a agenda)
+(Acceder a agenda) <.. (Elegir contacto) : extend
+(Elegir contacto) <-- (Llamar) : include
+(Elegir contacto) <-- (Videoconferencia) : include
+(Elegir contacto) <-- (Escribir mensaje corto) :include
+
+@enduml

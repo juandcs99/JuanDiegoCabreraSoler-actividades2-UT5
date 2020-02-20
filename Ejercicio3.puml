@@ -1,0 +1,9 @@
+@startuml
+:Cliente: -- (Operaciones on-line)
+(Operaciones on-line) <-- (Transferencia)
+(Operaciones on-line) <-- (Operaciones en bolsa)
+(Transferencia) <.. (Transferencia mayor de 9000€) : extend
+(Transferencia mayor de 9000€) <-- (Notificar a un agente)
+:Agente: -- (Verificar la transferencia)
+
+@enduml

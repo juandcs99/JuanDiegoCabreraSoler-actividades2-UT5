@@ -1,0 +1,13 @@
+@startuml
+left to right direction
+:Usuario: -- (Acceder)
+(Acceder) <--- (Registrarse) : extend
+:Usuario: -- (Ver cursos en los que está matriculado)
+:Usuario: -- (Configurar entorno)
+:Usuario: -- (Consultar los cursos en los que está matriculado)
+:Usuario: -- (Publicar en el foro)
+:Usuario: -- (Descargar material)
+:Usuario: -- (Entregar resultados)
+(Entregar resultados) <|-- (Subir archivos)
+(Entregar resultados) <|-- (Introducir texto)
+@enduml

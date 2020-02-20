@@ -1,0 +1,16 @@
+@startuml
+:Cliente: -- (Login)
+(Login) <-- (Registrarse) : extend
+:Cliente: -- (Mostrar información del producto)
+(Mostrar información del producto) <.. (Realizar pedido) : include
+(Mostrar información del producto) -- :Sistema externo:
+:Cliente: -- (Devolver producto)
+:Cliente: -- (Cancelar pedido)
+:Cliente: -- (Consultar pedido)
+(Devolver producto) <.. (Actualizar contabilidad)
+(Actualizar contabilidad) -- :Sistema externo:
+:Cliente: -- (Realizar reclamación)
+:Encargado: -- (Consultar reclamaciones)
+(Consultar reclamaciones) -- (Crear informe de reclamación)
+:Cliente: -- (Consultar estado reclamación)
+@enduml

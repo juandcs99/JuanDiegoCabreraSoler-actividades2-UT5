@@ -1,0 +1,23 @@
+@startuml
+left to right direction
+:Vendedor: -- (Buscar inmueble)
+(Buscar inmueble) <.. (Listar datos del inmueble) : extend
+:Vendedor: -- (Consultar el estado de una venta)
+:Vendedor: -- (Crear venta)
+(Crear venta) <.. (Seleccionar agente)
+:Comprador: -- (Realizar oferta)
+(Realizar oferta) <.. (Notificar al vendedor)
+(Notificar al vendedor) -- :Sistema:
+(Realizar oferta) <.. :Vendedor:
+:Vendedor: <.. (Realizar contraoferta)
+(Realizar contraoferta) <.. (Notificar al comprador)
+(Notificar al comprador) -- :Sistema:
+:Comprador: -- (Llegar a un acuerdo)
+:Vendedor: -- (Llegar a un acuerdo)
+(Llegar a un acuerdo) -- :Sistema:
+:Sistema: -- (Registrar acuerdo)
+:Comprador: -- (Realizar prestamo) : extend
+(Realizar prestamo) <.. (Seleccionar entidad bancaria)
+(Seleccionar entidad bancaria) -- :Sistema:
+:Sistema: -- (Ponerse en contacto con entidad bancaria)
+@enduml
